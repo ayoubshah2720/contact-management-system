@@ -1,0 +1,57 @@
+@if (vm$ | async; as vm) {
+  <main class="contacts-page">
+    <section class="contacts-page__shell">
+      <aside class="contacts-page__sidebar">
+        <div class="contacts-page__sidebar-header">
+          <button type="button" class="contacts-page__nav-button" aria-label="Menu">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6 7.25h12v1.5H6v-1.5Zm0 4h8v1.5H6v-1.5Zm0 4h12v1.5H6v-1.5Z" />
+            </svg>
+          </button>
+          <h1>Contacts</h1>
+          <div class="contacts-page__nav-actions">
+            <button type="button" class="contacts-page__nav-button" aria-label="Previous contact">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M14.78 6.47 9.25 12l5.53 5.53-1.06 1.06L7.13 12l6.59-6.59 1.06 1.06Z" />
+              </svg>
+            </button>
+            <button type="button" class="contacts-page__nav-button" aria-label="Next contact">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="m9.22 17.53 5.53-5.53-5.53-5.53 1.06-1.06L16.87 12l-6.59 6.59-1.06-1.06Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <app-contact-search [value]="vm.searchTerm" (valueChange)="onSearchTermChange($event)"></app-contact-search>
+
+        <app-contact-list
+          [contacts]="vm.filteredContacts"
+          [selectedContactId]="vm.selectedContact?.id ?? null"
+          [primaryEmailMap]="vm.primaryEmailMap"
+          [loading]="vm.contactsState.status === 'loading'"
+          [error]="vm.contactsState.error"
+          (contactSelected)="onContactSelected($event)"
+          (retry)="retryContacts()"
+        ></app-contact-list>
+      </aside>
+
+      <div class="contacts-page__details">
+        @if (vm.contactsState.status === 'success' && !vm.contactsState.data.length) {
+          <app-empty-state
+            title="No contacts in the dataset"
+            message="Populate your mock API project to preview the dashboard."
+          ></app-empty-state>
+        } @else {
+          <app-contact-details
+            [contact]="vm.selectedContact"
+            [emailAddresses]="vm.detailsState.data"
+            [loading]="vm.detailsState.status === 'loading'"
+            [error]="vm.detailsState.error"
+            (retry)="retryEmailAddresses()"
+          ></app-contact-details>
+        }
+      </div>
+    </section>
+  </main>
+}

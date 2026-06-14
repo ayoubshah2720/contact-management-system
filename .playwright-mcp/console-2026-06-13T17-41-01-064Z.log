@@ -1,0 +1,47 @@
+[    2908ms] [LOG] Running frontend commit f0737ab5d802e095b34e61204b9f983a6c2e1b2c @ https://www.figma.com/design/7fMi9iwHrMOz3taFMcZDVe/Contacts-Management-Dashboard-Free-Resource-Shakir260?node-id=69-5&t=bljDfoiIlLdGxz8X-0:648
+[   21977ms] [WARNING] Statsig is not ready to log exposures, will retry in 1 seconds @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   21979ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ https://browser-intake-datadoghq.com/api/v2/rum:0
+[   22661ms] [INFO] [Fullscreen] Booting... (emscripten version 4.0.21) @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   23137ms] [INFO] [GPU] graphicsAPI:"WebGL 2", vendor:"Google Inc. (Intel)", renderer:"ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)" version:"OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))" @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   23150ms] [LOG] [Fullscreen] Ready in 633.1ms @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   23163ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ https://www.figma.com/webpack-artifacts/assets/1149-be7ceefa16dcb5a3.min.js.br:6
+[   23165ms] [WARNING] The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127 @ https://www.figma.com/webpack-artifacts/assets/1149-be7ceefa16dcb5a3.min.js.br:6
+[   23842ms] [INFO] [FullscreenApp] calling setEditorTheme and setting preference light @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   24107ms] [INFO] [MultiplayerSession] connecting to wss://www.figma.com/api/multiplayer/7fMi9iwHrMOz3taFMcZDVe?role=editor&tracking_session_id=Pm30pIYLrLKnkyrv&version=166&recentReload=0&file-load-streaming-compression&scenegraph-queries-initial-nodes=69:5&client_release=f0737ab5d802e095b34e61204b9f983a6c2e1b2c @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   24213ms] [INFO] [MultiplayerSession] Joining file version 106 (initial load) @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   26185ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://static.figma.com/fullscreen/2bee117d79dd83efe4371805ea77c410be7898ca/fullscreen-wasm/compiled_wasm.js.br:1
+[   26287ms] [WARNING] Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently @ https://static.figma.com/fullscreen/2bee117d79dd83efe4371805ea77c410be7898ca/fullscreen-wasm/compiled_wasm.js.br:1
+[   26373ms] [INFO] afterJoinEnd PageSyncing: Loaded incrementally {loaded_pages: 0:1} @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   26404ms] [INFO] [FullscreenApp] calling setEditorTheme and setting preference light @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   27481ms] [WARNING] Statsig is not ready to log exposures, will retry in 1 seconds @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   27935ms] [LOG] [import] git: f0737ab5d802e095b34e61204b9f983a6c2e1b2c, stamp: 742502982D78A2A7 @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   28026ms] [LOG] Loaded 219 scripts (11874150b), 86 from cache (2610478b) @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   28689ms] [INFO] [FullscreenApp] calling setEditorTheme and setting preference light @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   29714ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.figma.com/api/statsig/v1_ruleset:0
+[   29716ms] [ERROR] Failed to fetch v1 ruleset: w: XHR for "/api/statsig/v1_ruleset" failed with status 401
+    at P (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1385:11140)
+    at async Object.O [as get] (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1385:11522)
+    at async https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1026:257224
+    at async g.validate (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1365:5067)
+    at async b (https://www.figma.com/webpack-artifacts/assets/figma_app-23e100fab01fc6a9.min.js.br:173:474640)
+    at async y (https://www.figma.com/webpack-artifacts/assets/figma_app-23e100fab01fc6a9.min.js.br:173:473844)
+    at async Object.write (https://www.figma.com/webpack-artifacts/assets/figma_app-23e100fab01fc6a9.min.js.br:173:473463) @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   32911ms] [LOG] [Fullscreen] loadtime=26.35s maxmem=11449108 @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   33979ms] [WARNING] pixel already configured. @ https://pixel.byspotify.com/ping.min.js:0
+[   34533ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.figma.com/api/folders/484063591:0
+[   34895ms] w: XHR for "/api/folders/484063591" failed with status 401
+    at P (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1385:11140)
+    at async Object.O [as get] (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1385:11522)
+    at async https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1026:189640
+    at async g.validate (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:1365:5067)
+    at async h.fetchObject (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:236:179217)
+    at async f (https://www.figma.com/webpack-artifacts/assets/2220-9cf7b7db6094bc22.min.js.br:236:158576)
+[   35653ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://www.figma.com/api/design_systems/libraries_by_library_keys:0
+[   35748ms] [INFO] [Sprigma] Sprig SDK is ready @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   35940ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://ib.adnxs.com/pixie?e=PageView&pi=7b24669b-6c67-4a7f-9544-5252dbd1d38b&it=1781372496196&v=0.0.45&u=https%3A%2F%2Fmarketing.figma.com%2F%3Freferrer%3D%26temp-cache-bust%3D1%26gpc_code%3Dpk_sd&st=1781372496195&et=1781372496217&if=1&uetmsmid=a8149114-4c0e-4f75-9725-a799bd3ca171&asce=0&ascc=0&tcfhl=0&tcfe=0&tcfgdpr=0&tcfc=0:0
+[   35947ms] [ERROR] Access to fetch at 'https://ib.adnxs.com/pixie/up?pi=7b24669b-6c67-4a7f-9544-5252dbd1d38b' from origin 'https://marketing.figma.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://marketing.figma.com/?referrer=&temp-cache-bust=1&gpc_code=pk_sd:0
+[   35949ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://ib.adnxs.com/pixie/up?pi=7b24669b-6c67-4a7f-9544-5252dbd1d38b:0
+[   36385ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[   36393ms] [ERROR] Not signed in with the identity provider. @ https://www.figma.com/design/7fMi9iwHrMOz3taFMcZDVe/Contacts-Management-Dashboard-Free-Resource-Shakir260?node-id=69-5:0
+[   44358ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53
+[ 3782807ms] [LOG] [Livegraph] Connection closed. Code: 4001, reason: connection_lifetime @ https://www.figma.com/webpack-artifacts/assets/vendor-core-f97691b5f390a9d7.min.js.br:53

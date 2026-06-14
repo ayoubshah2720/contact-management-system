@@ -1,0 +1,140 @@
+<section class="details-panel" aria-label="Selected contact details">
+  @if (!contact) {
+    <app-empty-state
+      title="Select a contact"
+      message="Choose a contact from the left to review their details and email addresses."
+    ></app-empty-state>
+  } @else {
+    <div class="details-header">
+      <div class="details-header__avatar" [class.details-header__avatar--image]="contact.avatar">
+        @if (contact.avatar) {
+          <img [src]="contact.avatar" [alt]="(contact | fullName) + ' avatar'" />
+        } @else {
+          <span>{{ (contact.firstName[0] || '') + (contact.lastName[0] || '') }}</span>
+        }
+      </div>
+
+      <div class="details-header__copy">
+        <h1>{{ contact | fullName }}</h1>
+        <p>{{ role }}</p>
+        <div class="details-header__actions">
+          <button type="button">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path
+                d="M5.75 5h12.5A2.75 2.75 0 0 1 21 7.75v7.5A2.75 2.75 0 0 1 18.25 18H10.4l-3.7 2.76c-.5.38-1.2.02-1.2-.6V18.1A2.75 2.75 0 0 1 3 15.25v-7.5A2.75 2.75 0 0 1 5.75 5Z"
+              />
+            </svg>
+            <span>Message</span>
+          </button>
+          <button type="button" class="details-header__icon" aria-label="Share contact card">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M7 4.75h10A2.25 2.25 0 0 1 19.25 7v10A2.25 2.25 0 0 1 17 19.25H13.5v-1.5H17a.75.75 0 0 0 .75-.75V7A.75.75 0 0 0 17 6.25H7a.75.75 0 0 0-.75.75V17c0 .41.34.75.75.75h3.5v1.5H7A2.25 2.25 0 0 1 4.75 17V7A2.25 2.25 0 0 1 7 4.75Z" />
+              <path d="M12 18.94 8.97 15.9l1.06-1.06 1.22 1.22V10h1.5v6.06l1.22-1.22L15 15.9 12 18.94Z" />
+              <path d="M8.5 9.25h7v1.5h-7v-1.5Z" />
+            </svg>
+          </button>
+          <button type="button" class="details-header__icon" aria-label="Call contact">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path
+                d="M6.85 4.5h2.28c.37 0 .7.25.79.61l.66 2.63c.08.3-.02.62-.25.82L8.9 9.77a12.3 12.3 0 0 0 5.33 5.33l1.21-1.43a.81.81 0 0 1 .82-.25l2.63.66c.36.09.61.42.61.79v2.28c0 .47-.38.85-.85.85C11.39 18 6 12.61 6 5.35c0-.47.38-.85.85-.85Z"
+              />
+            </svg>
+          </button>
+          <button type="button" class="details-header__icon" aria-label="More actions">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <circle cx="6.5" cy="12" r="1.5" />
+              <circle cx="12" cy="12" r="1.5" />
+              <circle cx="17.5" cy="12" r="1.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <dl class="details-table">
+      <div class="details-table__row">
+        <dt>Company</dt>
+        <dd class="details-table__value">{{ company }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Job title</dt>
+        <dd class="details-table__value">{{ jobTitle }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Phone</dt>
+        <dd class="details-table__value">{{ contact.phone || 'Not available' }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Address</dt>
+        <dd class="details-table__value">{{ address }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Location</dt>
+        <dd class="details-table__value">{{ location }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Notes</dt>
+        <dd class="details-table__value">{{ notes }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Email</dt>
+        <dd>
+          @if (loading) {
+            <app-loading-spinner label="Loading email addresses"></app-loading-spinner>
+          } @else if (error) {
+            <app-error-state
+              title="Could not load email addresses"
+              [message]="error"
+              actionLabel="Try again"
+              (action)="retry.emit()"
+            ></app-error-state>
+          } @else if (!emailList.length) {
+            <app-empty-state
+              title="No email addresses found"
+              message="This contact does not currently have any email records."
+            ></app-empty-state>
+          } @else {
+            <div class="details-table__stack">
+              @for (emailAddress of emailList; track emailAddress.id) {
+                <div class="details-table__item">
+                  <div>
+                    <span class="details-table__value">{{ emailAddress.email }}</span>
+                    <span class="details-table__type">{{ emailAddress.type || 'Email' }}</span>
+                  </div>
+                  @if (emailAddress.isPrimary) {
+                    <span class="badge">Primary</span>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Primary</dt>
+        <dd class="details-table__value">{{ primaryEmail }}</dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Created</dt>
+        <dd class="details-table__value">
+          {{ createdAtValue ? (createdAtValue | date: 'mediumDate') : 'Not available' }}
+        </dd>
+      </div>
+
+      <div class="details-table__row">
+        <dt>Updated</dt>
+        <dd class="details-table__value">
+          {{ updatedAtValue ? (updatedAtValue | date: 'mediumDate') : 'Not available' }}
+        </dd>
+      </div>
+    </dl>
+  }
+</section>

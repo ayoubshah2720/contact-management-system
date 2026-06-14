@@ -1,0 +1,48 @@
+<article class="contact-card" [class.contact-card--selected]="isSelected">
+  <div class="contact-card__identity">
+    <span class="contact-card__status" [class]="'contact-card__status contact-card__status--' + indicatorClass"></span>
+
+    <div class="contact-card__avatar" [class.contact-card__avatar--image]="contact.avatar">
+      @if (contact.avatar) {
+        <img [src]="contact.avatar" [alt]="(contact | fullName) + ' avatar'" />
+      } @else {
+        <span>{{ initials }}</span>
+      }
+    </div>
+
+    <div class="contact-card__content">
+      <h3>{{ contact | fullName }}</h3>
+
+      <p class="contact-card__subtitle">
+        {{ contact.jobTitle || contact.company || 'Customer profile' }}
+      </p>
+
+      <p class="contact-card__meta">{{ primaryLine }}</p>
+      <p class="contact-card__meta contact-card__meta--muted">{{ secondaryLine }}</p>
+    </div>
+  </div>
+
+  <div class="contact-card__actions" aria-hidden="true">
+    <span class="contact-card__icon">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path
+          d="M5.75 5h12.5A2.75 2.75 0 0 1 21 7.75v7.5A2.75 2.75 0 0 1 18.25 18H10.4l-3.7 2.76c-.5.38-1.2.02-1.2-.6V18.1A2.75 2.75 0 0 1 3 15.25v-7.5A2.75 2.75 0 0 1 5.75 5Zm0 1.5c-.69 0-1.25.56-1.25 1.25v7.5c0 .69.56 1.25 1.25 1.25H7v2.15L9.89 16.5h8.36c.69 0 1.25-.56 1.25-1.25v-7.5c0-.69-.56-1.25-1.25-1.25H5.75Z"
+        />
+      </svg>
+    </span>
+    <span class="contact-card__icon">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <path
+          d="M6.85 4.5h2.28c.37 0 .7.25.79.61l.66 2.63c.08.3-.02.62-.25.82L8.9 9.77a12.3 12.3 0 0 0 5.33 5.33l1.21-1.43a.81.81 0 0 1 .82-.25l2.63.66c.36.09.61.42.61.79v2.28c0 .47-.38.85-.85.85C11.39 18 6 12.61 6 5.35c0-.47.38-.85.85-.85Z"
+        />
+      </svg>
+    </span>
+    <span class="contact-card__icon">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <circle cx="6.5" cy="12" r="1.5" />
+        <circle cx="12" cy="12" r="1.5" />
+        <circle cx="17.5" cy="12" r="1.5" />
+      </svg>
+    </span>
+  </div>
+</article>

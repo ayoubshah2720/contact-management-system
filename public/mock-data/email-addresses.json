@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "contactId": "1",
+    "email": "nicholas.gordon@gmail.com",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "2",
+    "contactId": "1",
+    "email": "nicholas.gordon@whiteui.store",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "3",
+    "contactId": "2",
+    "email": "bradley.malone@whiteui.store",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "4",
+    "contactId": "2",
+    "email": "bradley.malone@gmail.com",
+    "type": "backup",
+    "isPrimary": false
+  },
+  {
+    "id": "5",
+    "contactId": "3",
+    "email": "johanna.stevens@gmail.com",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "6",
+    "contactId": "3",
+    "email": "johanna.stevens@whiteui.store",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "7",
+    "contactId": "3",
+    "email": "j.stevens@ymsg.com",
+    "type": "alternate",
+    "isPrimary": false
+  },
+  {
+    "id": "8",
+    "contactId": "4",
+    "email": "marvin.lambert@pulsestudio.com",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "9",
+    "contactId": "4",
+    "email": "marvin.design@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "10",
+    "contactId": "4",
+    "email": "m.lambert@freelance.com",
+    "type": "other",
+    "isPrimary": false
+  },
+  {
+    "id": "11",
+    "contactId": "5",
+    "email": "teresa.lloyd@asterpr.co",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "12",
+    "contactId": "5",
+    "email": "teresa.lloyd@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "13",
+    "contactId": "6",
+    "email": "fred.haynes@northline.io",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "14",
+    "contactId": "6",
+    "email": "fred.haynes.support@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "15",
+    "contactId": "7",
+    "email": "rose.peters@whiteui.store",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "16",
+    "contactId": "7",
+    "email": "rose.pm@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "17",
+    "contactId": "8",
+    "email": "brian.watson@corebit.dev",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "18",
+    "contactId": "8",
+    "email": "brian.watson@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "19",
+    "contactId": "9",
+    "email": "hettie.richardson@corebit.dev",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "20",
+    "contactId": "9",
+    "email": "hettie.richardson@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  },
+  {
+    "id": "21",
+    "contactId": "10",
+    "email": "jasmine.cole@northline.io",
+    "type": "work",
+    "isPrimary": true
+  },
+  {
+    "id": "22",
+    "contactId": "10",
+    "email": "jasmine.ops@gmail.com",
+    "type": "personal",
+    "isPrimary": false
+  }
+]

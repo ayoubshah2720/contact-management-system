@@ -1,0 +1,27 @@
+.contact-list-panel {
+  min-height: 24rem;
+}
+
+.contact-list {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.contact-list__item {
+  border-radius: 1rem;
+}
+
+.contact-list__select {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.28);
+    outline-offset: 3px;
+  }
+}

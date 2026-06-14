@@ -1,0 +1,22 @@
+<div class="search-field">
+  <label class="search-field__control">
+    <input
+      type="search"
+      [ngModel]="value"
+      (ngModelChange)="valueChange.emit($event)"
+      placeholder="Search for a contact"
+      aria-label="Search contacts"
+    />
+
+    <span class="search-field__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" focusable="false">
+        <circle cx="10" cy="10" r="5.75" />
+        <path d="m14.6 14.6 5 5" />
+      </svg>
+    </span>
+  </label>
+  <div class="search-field__copy">
+    <!-- <p>Search for a contact</p> -->
+    <span>Name, email or phone number</span>
+  </div>
+</div>

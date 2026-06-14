@@ -1,0 +1,40 @@
+<section class="contact-list-panel" aria-label="Contacts">
+  @if (loading) {
+    <app-loading-spinner label="Loading contacts"></app-loading-spinner>
+  } @else if (error) {
+    <app-error-state
+      title="Could not load contacts"
+      [message]="error"
+      actionLabel="Try again"
+      (action)="retry.emit()"
+    ></app-error-state>
+  } @else if (!contacts.length) {
+    <app-empty-state
+      title="No contacts found"
+      message="Try a different search term or confirm your mock API has data."
+    ></app-empty-state>
+  } @else {
+    <div class="contact-list">
+      @for (contact of contacts; track trackByContactId($index, contact)) {
+        <div
+          class="contact-list__item"
+          [class.contact-list__item--selected]="selectedContactId === contact.id"
+        >
+          <button
+            type="button"
+            class="contact-list__select"
+            [attr.aria-pressed]="selectedContactId === contact.id"
+            [attr.aria-label]="'Open ' + contact.firstName + ' ' + contact.lastName"
+            (click)="contactSelected.emit(contact)"
+          >
+          <app-contact-card
+            [contact]="contact"
+            [isSelected]="selectedContactId === contact.id"
+            [primaryEmail]="primaryEmailMap[contact.id] || contact.primaryEmail || contact.email || ''"
+          ></app-contact-card>
+          </button>
+        </div>
+      }
+    </div>
+  }
+</section>
